@@ -1,26 +1,34 @@
 <div class="row">
 
-  <section class="col col-3 fixed-top" style="height: 800px; margin-top: 7%; overflow-y: scroll; overflow-x: hidden">
-    <h2 class="h3">Bookmarks</h2>
-    <div class="row">
-      <tm-poster *ngFor="let show of bookmarks" class="col col-6" [show]="show">
-        <tm-bookmark-remove [item]="show"></tm-bookmark-remove>
-      </tm-poster>
-    </div>
+  <section class="col col-4 fixed-top" style="height: 800px; margin-top: 7%; overflow-y: scroll; overflow-x: hidden">
+    <ng-container *ngIf="bookmarks$ | async as bookmarks">
+      <h2 *ngIf="bookmarksLoaded$ | async; else bookmarksPlaceholder" class="h5">
+        Bookmarks ({{bookmarks.length}})
+      </h2>
+      <ng-template #bookmarksPlaceholder>
+        <h2 class="h5 text-muted">loading bookmarks...</h2>
+      </ng-template>
+      <div class="row">
+        <tm-poster *ngFor="let show of bookmarks" class="col col-6" [show]="show">
+          <tm-bookmark-remove [item]="show"></tm-bookmark-remove>
+        </tm-poster>
+      </div>
+    </ng-container>
   </section>
 
-  <section class="col col-3"></section>
+  <section class="col col-4"></section>
 
   <section class="col">
     <h1 class="h3">Search TV shows</h1>
     <!--<audio #aRef src="http://www.hocmuth.com"></audio>-->
     <!--<button (click)="aRef.play()">Play</button>-->
     <!--<button (click)="aRef.pause()">Pause</button>-->
-    <form class="input-group mb-3">
-      <input autocomplete="off" [ngModel]="query" (ngModelChange)="updateQueryAndSearch($event)" name="query"
-             type="search" class="form-control">
+    <form [formGroup]="searchForm" class="input-group mb-3">
+      <input autocomplete="off" name="query"
+             type="search" class="form-control" formControlName="query">
       <div class="input-group-append">
-        <button class="btn btn-outline-info" type="submit" (click)="search(query)">
+        <button class="btn btn-outline-info" type="submit" (click)="search(searchForm.value.query)"
+                [disabled]="searchForm.get('query').errors?.required">
           <span class="fa fa-search"></span>
         </button>
       </div>
@@ -39,9 +47,6 @@
         5. inject BookmarksService into BookmarkAddComponent & define necessary methods
         6. repeat for bookmark-remove (css class btn-danger)
         -->
-        <!--<button class="btn btn-outline-info btn-sm" (click)="saveBookmark(show)" [disabled]="isBookmarked(show)">-->
-        <!--<span class="fa fa-star"></span>-->
-        <!--</button>-->
       </div>
       <div *ngIf="shows.length <= 0" class="col col-4">
         No results found!

@@ -27,7 +27,6 @@ export class PosterComponent implements OnChanges {
   get isDetailsComponent(): boolean {
 
     const component = this.route.component;
-    console.log(component);
     return component instanceof ShowDetailsComponent;
   }
 }
