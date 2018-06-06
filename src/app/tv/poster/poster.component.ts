@@ -1,6 +1,8 @@
 import {ChangeDetectionStrategy, Component, Input, OnChanges, ViewEncapsulation} from '@angular/core';
 import {Show} from '../tv.models';
 import {get} from 'lodash';
+import {ActivatedRoute} from '@angular/router';
+import {ShowDetailsComponent} from '../show-details/show-details.component';
 
 @Component({
   selector: 'tm-poster',
@@ -14,10 +16,18 @@ export class PosterComponent implements OnChanges {
   @Input() size: number;
   posterUrl: string;
   private readonly placeHolderUrl = 'https://www.fillmurray.com/200/300';
-  constructor() {
+
+  constructor(private route: ActivatedRoute) {
   }
 
   ngOnChanges() {
     this.posterUrl = get(this.show, 'image.medium', this.placeHolderUrl);
+  }
+
+  get isDetailsComponent(): boolean {
+
+    const component = this.route.component;
+    console.log(component);
+    return component instanceof ShowDetailsComponent;
   }
 }

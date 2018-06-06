@@ -110,6 +110,57 @@
           "href": "http://api.tvmaze.com/episodes/47947"
         }
       }
+    },
+    {
+      "id": 999,
+      "url": "http://www.tvmaze.com/shows/999/flash-gordon",
+      "name": "Flash Gordon",
+      "type": "Scripted",
+      "language": "English",
+      "genres": [
+        "Science-Fiction"
+      ],
+      "status": "Ended",
+      "runtime": 60,
+      "premiered": "2007-08-10",
+      "officialSite": null,
+      "schedule": {
+        "time": "21:00",
+        "days": []
+      },
+      "rating": {
+        "average": 6.1
+      },
+      "weight": 73,
+      "network": {
+        "id": 16,
+        "name": "Syfy",
+        "country": {
+          "name": "United States",
+          "code": "US",
+          "timezone": "America/New_York"
+        }
+      },
+      "webChannel": null,
+      "externals": {
+        "tvrage": 15536,
+        "thetvdb": 80441,
+        "imdb": "tt0959086"
+      },
+      "image": {
+        "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/6/16548.jpg",
+        "original": "http://static.tvmaze.com/uploads/images/original_untouched/6/16548.jpg"
+      },
+      "summary": "<p>Placing a 21st century spin on a science fiction classic, SCI FI's contemporized version of <b>Flash Gordon</b> follows the all-new adventures of Flash and his companions, Dale Arden and Dr. Hans Zarkov. Ordinary people thrust into extraordinary circumstances, they find themselves as Earth's last line of defense against the forces of the merciless dictator Ming.</p>",
+      "updated": 1512969260,
+      "_links": {
+        "self": {
+          "href": "http://api.tvmaze.com/shows/999"
+        },
+        "previousepisode": {
+          "href": "http://api.tvmaze.com/episodes/98788"
+        }
+      }
     }
   ]
 }

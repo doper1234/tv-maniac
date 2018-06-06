@@ -1,7 +1,7 @@
 <ng-container *ngIf="show">
   <img [src]="posterUrl" class="img-fluid" alt="{{show.name}}">
   <ng-content></ng-content>
-  <h2 class="h5">
+  <h2 class="h5" *ngIf="!isDetailsComponent">
     <a routerLink="/tv/{{show.id}}">{{show.name}}</a>
   </h2>
 </ng-container>
