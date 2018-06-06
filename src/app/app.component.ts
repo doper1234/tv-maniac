@@ -4,6 +4,7 @@ interface MenuItem {
   label: string;
   path: string;
   exact?: boolean;
+  class: string;
 }
 
 @Component({
@@ -13,9 +14,9 @@ interface MenuItem {
 })
 export class AppComponent {
   menu: MenuItem[] = [
-    {label: 'Home', path: '', exact: true},
-    {label: 'TV Shows', path: 'tv'},
-    {label: 'Contact', path: 'contact'},
+    {label: 'Home', path: '', exact: true, class: 'fa fa-home'},
+    {label: 'TV Shows', path: 'tv', class: 'fa fa-tv'},
+    {label: 'Contact', path: 'contact', class: 'fa fa-phone'},
   ];
 
 }

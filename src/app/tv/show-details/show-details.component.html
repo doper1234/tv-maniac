@@ -1,0 +1,32 @@
+<ng-container *ngIf="!show">
+  <div class="h-100 row align-items-center">
+    <div class="col text-center">
+      <span class="fa fa-pulse fa-spinner" style="font-size:48px;"></span>
+    </div>
+  </div>
+</ng-container>
+<div class="row">
+  <tm-poster class="col col-4" [show]="show" size="1"></tm-poster>
+  <section class="col">
+    <h1 class="h2">{{show.name}}</h1>
+    <div [innerHTML]="show.summary"></div>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>number</th>
+        <th>title</th>
+        <th>air date</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let episode of show._embedded.episodes">
+        <td>{{episode | episodise}}</td>
+        <td>{{episode.name}}</td>
+        <td>{{episode.airdate | date:'short'}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+
+<button class="btn btn-info"><span class="fa fa-arrow-circle-left"></span></button>

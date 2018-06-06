@@ -1,3 +1,52 @@
-<p>
-  search works!
-</p>
+<div class="row">
+
+  <section class="col col-3 fixed-top" style="height: 800px; margin-top: 7%; overflow-y: scroll; overflow-x: hidden">
+    <h2 class="h3">Bookmarks</h2>
+    <div class="row">
+      <tm-poster *ngFor="let show of bookmarks" class="col col-6" [show]="show">
+        <tm-bookmark-remove [item]="show"></tm-bookmark-remove>
+      </tm-poster>
+    </div>
+  </section>
+
+  <section class="col col-3"></section>
+
+  <section class="col">
+    <h1 class="h3">Search TV shows</h1>
+    <!--<audio #aRef src="http://www.hocmuth.com"></audio>-->
+    <!--<button (click)="aRef.play()">Play</button>-->
+    <!--<button (click)="aRef.pause()">Pause</button>-->
+    <form class="input-group mb-3">
+      <input autocomplete="off" [ngModel]="query" (ngModelChange)="updateQueryAndSearch($event)" name="query"
+             type="search" class="form-control">
+      <div class="input-group-append">
+        <button class="btn btn-outline-info" type="submit" (click)="search(query)">
+          <span class="fa fa-search"></span>
+        </button>
+      </div>
+    </form>
+    <div class="row">
+      <div *ngFor="let show of shows" class="col col-4">
+        <tm-poster [show]="show">
+          <tm-bookmark-add [item]="show"></tm-bookmark-add>
+          <tm-bookmark-remove [item]="show"></tm-bookmark-remove>
+        </tm-poster>
+        <!--
+        1. in bookmarks module create bookmark-add component
+        2. in bookmark-add define item:Bookmark input
+        3. put <tm-bookmark-add [item]="show"></tm-bookmark-add> in search.component.html
+        4. move button html to bookmark-add.component.html
+        5. inject BookmarksService into BookmarkAddComponent & define necessary methods
+        6. repeat for bookmark-remove (css class btn-danger)
+        -->
+        <!--<button class="btn btn-outline-info btn-sm" (click)="saveBookmark(show)" [disabled]="isBookmarked(show)">-->
+        <!--<span class="fa fa-star"></span>-->
+        <!--</button>-->
+      </div>
+      <div *ngIf="shows.length <= 0" class="col col-4">
+        No results found!
+      </div>
+    </div>
+  </section>
+</div>
+
