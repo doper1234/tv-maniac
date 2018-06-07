@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {TvMazeService} from '../tv-maze.service';
-import {Show} from '../tv.models';
+import {Show} from '../../shared/models/tv.models';
 import {BookmarksService} from '../../bookmarks/bookmarks.service';
 import {Observable} from 'rxjs';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';

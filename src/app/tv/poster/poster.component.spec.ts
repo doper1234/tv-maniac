@@ -2,7 +2,7 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {PosterComponent} from './poster.component';
 import {By} from '@angular/platform-browser';
 import {RouterTestingModule} from '@angular/router/testing';
-import {Show} from '../tv.models';
+import {Show} from '../../shared/models/tv.models';
 
 // naming convention, can use '<tm-poster>' or 'PosterComponent'
 describe('<tm-poster>', () => {

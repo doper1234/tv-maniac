@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Bookmark, BookmarkId} from './bookmarks.models';
+import {Bookmark, BookmarkId} from '../shared/models/bookmarks.models';
 import {HttpClient} from '@angular/common/http';
 import {BehaviorSubject, Observable} from 'rxjs';
 import {share} from 'rxjs/operators';

@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {ShowDetailsData} from '../../app-routing.module';
-import {ShowDetails} from '../tv.models';
+import {ShowDetails} from '../../shared/models/tv.models';
 
 @Component({
   selector: 'tm-show-details',

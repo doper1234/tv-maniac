@@ -1,7 +1,7 @@
 import {BookmarkedDirective} from './bookmarked.directive';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {Component, Provider} from '@angular/core';
-import {Bookmark} from './bookmarks.models';
+import {Bookmark} from '../shared/models/bookmarks.models';
 import {BookmarksService} from './bookmarks.service';
 import {By} from '@angular/platform-browser';
 

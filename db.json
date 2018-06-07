@@ -1,33 +1,37 @@
 {
   "bookmarks": [
     {
-      "id": 618,
-      "url": "http://www.tvmaze.com/shows/618/better-call-saul",
-      "name": "Better Call Saul",
-      "type": "Scripted",
+      "id": 6482,
+      "url": "http://www.tvmaze.com/shows/6482/hey-arnold",
+      "name": "Hey Arnold!",
+      "type": "Animation",
       "language": "English",
       "genres": [
-        "Drama",
-        "Crime",
-        "Legal"
+        "Children"
       ],
-      "status": "Running",
-      "runtime": 60,
-      "premiered": "2015-02-08",
-      "officialSite": "http://www.amc.com/shows/better-call-saul",
+      "status": "Ended",
+      "runtime": 30,
+      "premiered": "1996-10-07",
+      "officialSite": null,
       "schedule": {
-        "time": "22:00",
+        "time": "18:30",
         "days": [
-          "Monday"
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
         ]
       },
       "rating": {
-        "average": 8.8
+        "average": 8.2
       },
-      "weight": 98,
+      "weight": 0,
       "network": {
-        "id": 20,
-        "name": "AMC",
+        "id": 27,
+        "name": "Nickelodeon",
         "country": {
           "name": "United States",
           "code": "US",
@@ -36,98 +40,95 @@
       },
       "webChannel": null,
       "externals": {
-        "tvrage": 37780,
-        "thetvdb": 273181,
-        "imdb": "tt3032476"
+        "tvrage": 3842,
+        "thetvdb": 72005,
+        "imdb": "tt0115200"
       },
       "image": {
-        "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/44/112457.jpg",
-        "original": "http://static.tvmaze.com/uploads/images/original_untouched/44/112457.jpg"
+        "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/24/61868.jpg",
+        "original": "http://static.tvmaze.com/uploads/images/original_untouched/24/61868.jpg"
       },
-      "summary": "<p><b>Better Call Saul</b> is the prequel to the award-winning series Breaking Bad, set six years before Saul Goodman became Walter White's lawyer. When we meet him, the man who will become Saul Goodman is known as Jimmy McGill, a small-time lawyer searching for his destiny, and, more immediately, hustling to make ends meet. Working alongside, and often against, Jimmy is \"fixer\" Mike Ehrmantraut, a beloved character introduced in Breaking Bad. The series will track Jimmy's transformation into Saul Goodman, the man who puts \"criminal\" in \"criminal lawyer.</p>",
-      "updated": 1527800442,
+      "summary": "<p>The adventures of a daydreaming, jazz-loving, football-headed 9-year-old, who lives in a boarding house with his grandparents and some eccentric boarders, encounters life in the city with his best friend Gerald, a loofah-haired kid, who is the keeper of the urban tales and coolest kid in class; and Helga, who torments him, but loves him secretly.</p>",
+      "updated": 1480321205,
       "_links": {
         "self": {
-          "href": "http://api.tvmaze.com/shows/618"
+          "href": "http://api.tvmaze.com/shows/6482"
         },
         "previousepisode": {
-          "href": "http://api.tvmaze.com/episodes/1156194"
-        },
-        "nextepisode": {
-          "href": "http://api.tvmaze.com/episodes/1474613"
+          "href": "http://api.tvmaze.com/episodes/382295"
         }
       }
     },
     {
-      "id": 34934,
-      "url": "http://www.tvmaze.com/shows/34934/flash-gordon",
-      "name": "Flash Gordon",
-      "type": "Scripted",
+      "id": 21311,
+      "url": "http://www.tvmaze.com/shows/21311/hey-duggee",
+      "name": "Hey Duggee",
+      "type": "Animation",
       "language": "English",
       "genres": [
-        "Action",
-        "Adventure",
-        "Fantasy"
+        "Children"
       ],
-      "status": "Ended",
-      "runtime": 30,
-      "premiered": "1954-10-01",
-      "officialSite": null,
+      "status": "Running",
+      "runtime": 10,
+      "premiered": "2015-01-12",
+      "officialSite": "http://www.bbc.co.uk/cbeebies/shows/hey-duggee",
       "schedule": {
-        "time": "",
-        "days": []
+        "time": "07:40",
+        "days": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ]
       },
       "rating": {
         "average": null
       },
-      "weight": 36,
+      "weight": 83,
       "network": {
-        "id": 72,
-        "name": "Syndication",
+        "id": 458,
+        "name": "CBeebies",
         "country": {
-          "name": "United States",
-          "code": "US",
-          "timezone": "America/New_York"
+          "name": "United Kingdom",
+          "code": "GB",
+          "timezone": "Europe/London"
         }
       },
       "webChannel": null,
       "externals": {
         "tvrage": null,
-        "thetvdb": 70331,
+        "thetvdb": 289541,
         "imdb": null
       },
       "image": {
-        "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/146/365630.jpg",
-        "original": "http://static.tvmaze.com/uploads/images/original_untouched/146/365630.jpg"
+        "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/75/188774.jpg",
+        "original": "http://static.tvmaze.com/uploads/images/original_untouched/75/188774.jpg"
       },
-      "summary": "<p>Based on Alex Raymon's legendary sci-fi comic strip hero, these episodes present the journeys of space hero Flash Gordon. Along with the lovely Dale Arden and the brilliant Dr. Zarkov, Flash represents the Galaxy Bureau of Investigation in an ongoing quest to keep the cosmos safe.</p>",
-      "updated": 1519923987,
+      "summary": "<p>Devised by BAFTA winning &amp; OSCAR-nominated Director Grant Orchard, <b>Hey Duggee</b> is based around 'The Squirrel Club' - run by a big friendly dog called Duggee - a place where kids take part in all kinds of activities, have adventures &amp; earn activity badges all along the way. Duggee teaches the kids about being responsible, working as a team, taking acceptable risks and most importantly ... having fun!</p><p>Produced entirely at STUDIO AKA, the series enlists the warmth and charm of critically acclaimed comedian Alexander Armstrong who narrates the playful series alongside an outstanding cast of kids in the main roles. Come and watch <i>Hey Duggee!</i> You'll be tapping your feet to the music in no time.</p>",
+      "updated": 1527777485,
       "_links": {
         "self": {
-          "href": "http://api.tvmaze.com/shows/34934"
+          "href": "http://api.tvmaze.com/shows/21311"
         },
         "previousepisode": {
-          "href": "http://api.tvmaze.com/episodes/1411697"
+          "href": "http://api.tvmaze.com/episodes/1474560"
         }
       }
     },
     {
-      "id": 7079,
-      "url": "http://www.tvmaze.com/shows/7079/the-flash",
-      "name": "The Flash",
-      "type": "Animation",
+      "id": 28546,
+      "url": "http://www.tvmaze.com/shows/28546/hey-hey-its-saturday",
+      "name": "Hey Hey! It's Saturday",
+      "type": "Variety",
       "language": "English",
-      "genres": [
-        "Action",
-        "Adventure",
-        "Science-Fiction"
-      ],
+      "genres": [],
       "status": "Ended",
-      "runtime": 7,
-      "premiered": "1967-11-11",
+      "runtime": 120,
+      "premiered": "1971-10-09",
       "officialSite": null,
       "schedule": {
-        "time": "",
+        "time": "19:30",
         "days": [
           "Saturday"
         ]
@@ -137,90 +138,32 @@
       },
       "weight": 0,
       "network": {
-        "id": 2,
-        "name": "CBS",
+        "id": 120,
+        "name": "Nine Network",
         "country": {
-          "name": "United States",
-          "code": "US",
-          "timezone": "America/New_York"
+          "name": "Australia",
+          "code": "AU",
+          "timezone": "Australia/Sydney"
         }
       },
       "webChannel": null,
       "externals": {
         "tvrage": null,
-        "thetvdb": 272094,
+        "thetvdb": 74298,
         "imdb": null
       },
       "image": {
-        "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/29/73727.jpg",
-        "original": "http://static.tvmaze.com/uploads/images/original_untouched/29/73727.jpg"
+        "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/113/284103.jpg",
+        "original": "http://static.tvmaze.com/uploads/images/original_untouched/113/284103.jpg"
       },
-      "summary": "<p><b>The Flash</b> is--of course!--the fastest man alive. Barry Allen, otherwise known as the Flash, and his sidekick Wally West, otherwise known as Kid Flash, battle evil villains and aliens who try to cause mayhem on Earth. They can outrun a bullet, vibrate through solid walls, and do all sorts of other things with their incredible speed. When there is trouble, Barry and Wally open up their rings which shoot out their costumes.</p>",
-      "updated": 1520572841,
+      "summary": "<p>Hosted by Daryl Sommers, <b>Hey Hey! It's Saturday</b> is a variety show, featuring sketches, performances, a talent show of sorts, and an array of celebrity guests, ranging from Australian television stars, to actors in big Hollywood blockbuster movies. It originally ran for 27 years to 1999, returning in 2010.</p>",
+      "updated": 1495769727,
       "_links": {
         "self": {
-          "href": "http://api.tvmaze.com/shows/7079"
+          "href": "http://api.tvmaze.com/shows/28546"
         },
         "previousepisode": {
-          "href": "http://api.tvmaze.com/episodes/406494"
-        }
-      }
-    },
-    {
-      "id": 13,
-      "url": "http://www.tvmaze.com/shows/13/the-flash",
-      "name": "The Flash",
-      "type": "Scripted",
-      "language": "English",
-      "genres": [
-        "Drama",
-        "Action",
-        "Science-Fiction"
-      ],
-      "status": "Running",
-      "runtime": 60,
-      "premiered": "2014-10-07",
-      "officialSite": "http://www.cwtv.com/shows/the-flash/",
-      "schedule": {
-        "time": "20:00",
-        "days": [
-          "Tuesday"
-        ]
-      },
-      "rating": {
-        "average": 8.1
-      },
-      "weight": 100,
-      "network": {
-        "id": 5,
-        "name": "The CW",
-        "country": {
-          "name": "United States",
-          "code": "US",
-          "timezone": "America/New_York"
-        }
-      },
-      "webChannel": null,
-      "externals": {
-        "tvrage": 36939,
-        "thetvdb": 279121,
-        "imdb": "tt3107288"
-      },
-      "image": {
-        "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/129/323466.jpg",
-        "original": "http://static.tvmaze.com/uploads/images/original_untouched/129/323466.jpg"
-      },
-      "summary": "<p>After a particle accelerator causes a freak storm, CSI Investigator Barry Allen is struck by lightning and falls into a coma. Months later he awakens with the power of super speed, granting him the ability to move through Central City like an unseen guardian angel. Though initially excited by his newfound powers, Barry is shocked to discover he is not the only \"meta-human\" who was created in the wake of the accelerator explosion -- and not everyone is using their new powers for good. Barry partners with S.T.A.R. Labs and dedicates his life to protect the innocent. For now, only a few close friends and associates know that Barry is literally the fastest man alive, but it won't be long before the world learns what Barry Allen has become...The Flash!</p>",
-      "updated": 1528239399,
-      "_links": {
-        "self": {
-          "href": "http://api.tvmaze.com/shows/13"
-        },
-        "previousepisode": {
-          "href": "http://api.tvmaze.com/episodes/1426878"
-        },
-        "nextepisode": {
-          "href": "http://api.tvmaze.com/episodes/1473791"
+          "href": "http://api.tvmaze.com/episodes/1184567"
         }
       }
     }

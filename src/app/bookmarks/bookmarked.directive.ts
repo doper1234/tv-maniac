@@ -1,5 +1,5 @@
 import {Directive, HostBinding, HostListener, Input} from '@angular/core';
-import {Bookmark} from './bookmarks.models';
+import {Bookmark} from '../shared/models/bookmarks.models';
 import {BookmarksService} from './bookmarks.service';
 
 // noinspection SpellCheckingInspection

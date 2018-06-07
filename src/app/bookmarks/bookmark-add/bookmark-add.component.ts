@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
-import {Show} from '../../tv/tv.models';
+import {Bookmark} from '@models';
+
 import {BookmarksService} from '../bookmarks.service';
 
 @Component({
@@ -8,9 +9,9 @@ import {BookmarksService} from '../bookmarks.service';
   styleUrls: ['./bookmark-add.component.scss']
 })
 export class BookmarkAddComponent {
-  @Input() item: Show;
+  @Input() item: Bookmark;
 
-  constructor(private bs: BookmarksService<Show>) {
+  constructor(private bs: BookmarksService<Bookmark>) {
   }
 
   saveBookmark() {

@@ -1,5 +1,5 @@
 import {EpisodisePipe} from './episodise.pipe';
-import {Episode} from './tv.models';
+import {Episode} from '../shared/models/tv.models';
 
 describe('EpisodisePipe', () => {
   let pipe: EpisodisePipe;

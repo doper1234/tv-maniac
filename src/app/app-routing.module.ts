@@ -6,7 +6,7 @@ import {ContactComponent} from './pages/contact/contact.component';
 import {Page404Component} from './pages/page404/page404.component';
 import {ShowDetailsComponent} from './tv/show-details/show-details.component';
 import {ShowDetailsResolver} from './tv/show-details/show-details.resolver';
-import {ShowDetails} from './tv/tv.models';
+import {ShowDetails} from './shared/models/tv.models';
 // import {HasRolesGuard} from './shared/has-roles.guard';
 import {MainSettingsComponent} from './settings/main-settings/main-settings.component';
 

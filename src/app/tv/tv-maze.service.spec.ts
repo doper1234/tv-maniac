@@ -1,7 +1,7 @@
 import {TestBed} from '@angular/core/testing';
 import {TvMazeService} from './tv-maze.service';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
-import {ShowDetails} from './tv.models';
+import {ShowDetails} from '../shared/models/tv.models';
 import {TvMazeEndpointsService} from './tv-maze-endpoints.service';
 import {of} from 'rxjs';
 

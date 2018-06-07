@@ -1,3 +1,5 @@
+@import "variables";
+
 :host {
   display: block;
 }
@@ -8,5 +10,9 @@
 
 h2 {
   font-weight: normal !important;
+}
+
+a{
+  color: darken($main-color, 15)
 }
 

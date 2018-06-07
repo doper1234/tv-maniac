@@ -1,7 +1,7 @@
 import {HttpClient} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {Observable, of} from 'rxjs';
-import {Show, ShowDetails, ShowResponse} from './tv.models';
+import {Show, ShowDetails, ShowResponse} from '../shared/models/tv.models';
 import {map, tap} from 'rxjs/operators';
 import {TvMazeEndpointsService} from './tv-maze-endpoints.service';
 import {TvService} from './tv.service';

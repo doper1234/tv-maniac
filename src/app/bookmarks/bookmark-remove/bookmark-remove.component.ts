@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Show} from '../../tv/tv.models';
+import {Show} from '../../shared/models/tv.models';
 import {BookmarksService} from '../bookmarks.service';
 
 @Component({
