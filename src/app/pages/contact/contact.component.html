@@ -3,19 +3,24 @@
     <h1>Contact us</h1>
 
     <div class="form-group">
-      <label for="email">Email</label>
+      <label for="email">Email
+        <!--element will have pending if it has an async validator-->
+        <span class="text-muted" *ngIf="emailRef.pending">(checking...)</span>
+      </label>
       <!--ways to use ngClass-->
-      <input type="email" #emailRef="ngModel" email required minlength="3"
+      <input type="email" #emailRef="ngModel" [tmStartsWithLetter]="true" required minlength="3"
              [(ngModel)]="contact.email"
              name="email"
              id="email"
              [ngClass]="{'is-invalid': showErrors(emailRef) }"
              [class.is-invalid]="showErrors(emailRef)"
-             class="form-control">
+             class="form-control" tmUserNameAvailable>
       <div class="invalid-feedback" *ngIf="showErrors(emailRef)">
         <div *ngIf="emailRef.errors.required">This is required</div>
         <div *ngIf="emailRef.errors.minlength">This is should be longer</div>
         <div *ngIf="emailRef.errors.email">This is should be a valid email</div>
+        <div *ngIf="emailRef.errors.userNameAvailable">Username is not available</div>
+        <div *ngIf="emailRef.errors.startsWithLetter">This is should start with a capital letter</div>
       </div>
     </div>
     <div class="form-group">
@@ -28,7 +33,7 @@
         <div *ngIf="messageRef.errors.minlength">This is should be longer</div>
       </div>
     </div>
-    <button class="btn btn-primary float-right" [disabled]="formRef.invalid" ><span class="fa fa-send"></span> Send</button>
+    <button class="btn btn-primary float-right" (tmSubmitIfValid)="submit()" ><span class="fa fa-send"></span> Send</button>
   </form>
 
 </div>

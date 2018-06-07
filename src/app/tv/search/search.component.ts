@@ -4,9 +4,10 @@ import {Show} from '../tv.models';
 import {BookmarksService} from '../../bookmarks/bookmarks.service';
 import {Observable} from 'rxjs';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {debounceTime, filter, map, tap} from 'rxjs/operators';
+import {debounceTime, filter, tap} from 'rxjs/operators';
 import {startsWithLetterValidator} from '../../shared/forms/starts-with-letter.validator';
 import {userNameAvailableValidator} from '../../shared/forms/user-name-available.validator';
+import {TvService} from '../tv.service';
 
 @Component({
   selector: 'tm-search',
@@ -22,9 +23,10 @@ export class SearchComponent {
 
   constructor(private tv: TvMazeService,
               private bs: BookmarksService<Show>,
+              private tvService: TvService,
               private fb: FormBuilder) {
     this.initForm();
-    this.search('flash');
+    this.search(this.searchForm.value.query);
     this.bookmarks$ = this.bs.getAll();
     this.bookmarksLoaded$ = this.bs.loaded$;
   }
@@ -32,12 +34,12 @@ export class SearchComponent {
   private initForm() {
     // const queryControl = this.fb.control('batman');
     this.searchForm = this.fb.group({
-      query: ['batman', [
+      query: [this.tvService.searchCache.query, [
         Validators.required,
         Validators.minLength(3),
         startsWithLetterValidator(),
-      ], [userNameAvailableValidator
-      ]],
+      ], /*[userNameAvailableValidator
+      ]*/],
     });
     // this.searchForm.valueChanges
     //   .pipe(map(({query}) => query))
@@ -47,22 +49,18 @@ export class SearchComponent {
       .valueChanges
       .pipe(
         debounceTime(200),
-        tap(v => console.log(this.searchForm.controls.query.errors)),
+        tap(() => console.log(this.searchForm.controls.query.errors)),
+        tap(query => this.tvService.searchCache.query = query),
         filter(() => this.searchForm.valid)
       )
       .subscribe(this.search);
-  }
-
-  updateQueryAndSearch(query: string) {
-    this.query = query;
-    this.search(query);
   }
 
   search = (query: string) => {
     this.tv.searchShows(query)
       .subscribe(shows => this.shows = shows,
         error => console.log(error));
-  };
+  }
 
 }
 

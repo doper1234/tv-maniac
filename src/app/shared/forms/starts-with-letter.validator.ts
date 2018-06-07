@@ -2,6 +2,7 @@ import {AbstractControl, ValidationErrors, ValidatorFn} from '@angular/forms';
 
 export function startsWithLetterValidator(upper?): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
+    console.log('hey value', control.value);
     if (!control.value) {
       return null;
     }

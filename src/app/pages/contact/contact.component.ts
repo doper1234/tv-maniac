@@ -19,4 +19,8 @@ export class ContactComponent {
     return (control.dirty || control.touched) && control.invalid;
   }
 
+  submit() {
+    console.info('submitting');
+  }
+
 }

@@ -1,22 +1,29 @@
 import {HttpClient} from '@angular/common/http';
 import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs';
+import {Observable, of} from 'rxjs';
 import {Show, ShowDetails, ShowResponse} from './tv.models';
-import {map} from 'rxjs/operators';
+import {map, tap} from 'rxjs/operators';
 import {TvMazeEndpointsService} from './tv-maze-endpoints.service';
+import {TvService} from './tv.service';
 
 @Injectable()
 export class TvMazeService {
   private readonly apiRoot: string;
 
-  constructor(private http: HttpClient, private endpoints: TvMazeEndpointsService) {
+  constructor(private http: HttpClient, private endpoints: TvMazeEndpointsService, private tvService: TvService) {
     this.apiRoot = endpoints.root;
   }
 
   searchShows(query: string): Observable<Show[]> {
+    // if (query === this.tvService.searchCache.query) {
+    //   return of(this.tvService.searchCache.shows);
+    // }
     const url = `${this.apiRoot}/search/shows?q=${query}`;
     return this.http.get<ShowResponse[]>(url)
-      .pipe(map(showsResponses => showsResponses.map(({show}) => show)));
+      .pipe(
+        map(showsResponses => showsResponses.map(({show}) => show)),
+        tap(shows => this.tvService.searchCache.shows = shows)
+      );
   }
 
   getShow(id: string): Observable<ShowDetails> {

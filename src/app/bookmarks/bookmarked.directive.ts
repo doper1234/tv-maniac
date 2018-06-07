@@ -4,7 +4,8 @@ import {BookmarksService} from './bookmarks.service';
 
 // noinspection SpellCheckingInspection
 @Directive({
-  selector: '[tmBookmarked]'
+  selector: '[tmBookmarked]',
+  exportAs: 'bookmarked',
 })
 export class BookmarkedDirective {
 
