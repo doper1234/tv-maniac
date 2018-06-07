@@ -3,13 +3,14 @@ import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import {Show, ShowDetails, ShowResponse} from './tv.models';
 import {map} from 'rxjs/operators';
+import {TvMazeEndpointsService} from './tv-maze-endpoints.service';
 
 @Injectable()
 export class TvMazeService {
-  version = 1.01;
-  private readonly apiRoot = 'https://api.tvmaze.com';
+  private readonly apiRoot: string;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private endpoints: TvMazeEndpointsService) {
+    this.apiRoot = endpoints.root;
   }
 
   searchShows(query: string): Observable<Show[]> {

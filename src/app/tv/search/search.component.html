@@ -35,7 +35,8 @@
     </form>
     <div class="row">
       <div *ngFor="let show of shows" class="col col-4">
-        <tm-poster [show]="show">
+
+        <tm-poster [show]="show" [tmBookmarked]="show">
           <tm-bookmark-add [item]="show"></tm-bookmark-add>
           <tm-bookmark-remove [item]="show"></tm-bookmark-remove>
         </tm-poster>

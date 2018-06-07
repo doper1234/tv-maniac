@@ -2,3 +2,31 @@
 @import "~bootstrap/scss/bootstrap";
 $fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome";
+
+
+.bookmarked {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.bookmarked.transparent::before {
+  opacity: 0.4;
+}
+
+.bookmarked::before {
+  content: 'bookmarked';
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: -24px;
+  transform: rotate(45deg);
+  background: #3273dc;
+  color: #eee;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: bold;
+  width: 120px;
+  text-align: center;
+  box-shadow: -1px 1px 3px rgba(#000, 0.7);
+}

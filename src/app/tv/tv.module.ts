@@ -5,10 +5,11 @@ import {TvMazeService} from './tv-maze.service';
 import {HttpClientModule} from '@angular/common/http';
 import {PosterComponent} from './poster/poster.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { BookmarksModule } from '../bookmarks/bookmarks.module';
-import { ShowDetailsComponent } from './show-details/show-details.component';
+import {BookmarksModule} from '../bookmarks/bookmarks.module';
+import {ShowDetailsComponent} from './show-details/show-details.component';
 import {RouterModule} from '@angular/router';
-import { EpisodisePipe } from './episodise.pipe';
+import {EpisodisePipe} from './episodise.pipe';
+import {TvMazeEndpointsService} from './tv-maze-endpoints.service';
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import { EpisodisePipe } from './episodise.pipe';
   ],
   providers: [
     TvMazeService,
+    TvMazeEndpointsService
   ],
   declarations: [SearchComponent, PosterComponent, ShowDetailsComponent, EpisodisePipe]
 })
