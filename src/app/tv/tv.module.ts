@@ -10,6 +10,7 @@ import {ShowDetailsComponent} from './show-details/show-details.component';
 import {RouterModule} from '@angular/router';
 import {EpisodisePipe} from './episodise.pipe';
 import {TvMazeEndpointsService} from './tv-maze-endpoints.service';
+import {ClientAreaComponent} from '../dynamic/client-area/client-area.component';
 
 @NgModule({
   imports: [

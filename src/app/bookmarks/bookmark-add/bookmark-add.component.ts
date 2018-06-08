@@ -14,6 +14,7 @@ export class BookmarkAddComponent {
   constructor(private bs: BookmarksService<Bookmark>) {
   }
 
+  // runs 'add' method of bookmarks service with a value from item's id
   saveBookmark() {
     this.bs.add(this.item);
   }

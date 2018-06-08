@@ -8,7 +8,8 @@ import {ShowDetailsComponent} from './tv/show-details/show-details.component';
 import {ShowDetailsResolver} from './tv/show-details/show-details.resolver';
 import {ShowDetails} from './shared/models/tv.models';
 // import {HasRolesGuard} from './shared/has-roles.guard';
-import {MainSettingsComponent} from './settings/main-settings/main-settings.component';
+// import {MainSettingsComponent} from './settings/main-settings/main-settings.component';
+import {ClientAreaComponent} from './dynamic/client-area/client-area.component';
 
 export interface ShowDetailsParams {
   id: string;
@@ -37,6 +38,7 @@ const routes: Routes = [
   },
   // lazy loading
   {path: 'settings', loadChildren: './settings/settings.module#SettingsModule'},
+  {path: 'client', component: ClientAreaComponent},
   {path: 'contact', component: ContactComponent},
   {path: '**', component: Page404Component},
 ];

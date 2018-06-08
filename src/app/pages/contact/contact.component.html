@@ -14,7 +14,7 @@
              id="email"
              [ngClass]="{'is-invalid': showErrors(emailRef) }"
              [class.is-invalid]="showErrors(emailRef)"
-             class="form-control" tmUserNameAvailable>
+             class="form-control {{'geee'}}" tmUserNameAvailable>
       <div class="invalid-feedback" *ngIf="showErrors(emailRef)">
         <div *ngIf="emailRef.errors.required">This is required</div>
         <div *ngIf="emailRef.errors.minlength">This is should be longer</div>
