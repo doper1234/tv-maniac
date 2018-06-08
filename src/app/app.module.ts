@@ -1,4 +1,4 @@
-import {BrowserModule} from '@angular/platform-browser';
+// import {BrowserModule} from '@angular/platform-browser';
 import {APP_INITIALIZER, NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
@@ -10,11 +10,12 @@ import {SharedModule} from './shared/shared.module';
 import {HttpClient} from '@angular/common/http';
 import {ConfigService} from './dynamic/config.service';
 import {configInitializer} from './dynamic/config.initializer';
-import {ClientService} from './dynamic/client-class';
+// import {ClientService} from './dynamic/client-class';
 import {AcmaClientService} from './dynamic/acma-client.service';
 import {EcmaClientService} from './dynamic/ecma-client.service';
 import {DynamicModule} from './dynamic/dynamic.module';
 import {CLIENT_SERVICE} from './dynamic/client-service.token';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import {CLIENT_SERVICE} from './dynamic/client-service.token';
     HomeComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     TvModule,
     PagesModule,

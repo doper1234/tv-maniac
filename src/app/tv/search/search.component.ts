@@ -6,13 +6,34 @@ import {Observable} from 'rxjs';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {debounceTime, filter, tap} from 'rxjs/operators';
 import {startsWithLetterValidator} from '../../shared/forms/starts-with-letter.validator';
-import {userNameAvailableValidator} from '../../shared/forms/user-name-available.validator';
+// import {userNameAvailableValidator} from '../../shared/forms/user-name-available.validator';
 import {TvService} from '../tv.service';
+import {animate, query, stagger, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'tm-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss']
+  styleUrls: ['./search.component.scss'],
+  animations: [
+    // good practice to use class, eg. Animations.fadeIn, Animations.fateIn(123)
+    trigger('staggerAnim', [
+      transition('* => *', [
+        query(':enter', [
+          style({opacity: 0, transform: 'translateY(-50px)'}),
+          stagger(300, [
+            animate('0.1s', style({opacity: 1, transform: 'translateY(0) rotate(360000deg)'}))
+          ])
+        ], {optional: true}),
+        query(':leave', [
+          style({opacity: 0, transform: 'translateX(0) scale(1)'}),
+          stagger(300, [
+            animate('0.2s', style({opacity: 1, transform: 'translateX(-500px) scale(0)'}))
+          ])
+        ], {optional: true})
+
+      ])
+    ])
+  ]
 })
 export class SearchComponent {
   shows: Show[] = [];
@@ -60,7 +81,7 @@ export class SearchComponent {
     this.tv.searchShows(query)
       .subscribe(shows => this.shows = shows,
         error => console.log(error));
-  }
+  };
 
 }
 

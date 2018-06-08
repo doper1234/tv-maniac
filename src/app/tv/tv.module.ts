@@ -11,9 +11,11 @@ import {RouterModule} from '@angular/router';
 import {EpisodisePipe} from './episodise.pipe';
 import {TvMazeEndpointsService} from './tv-maze-endpoints.service';
 import {ClientAreaComponent} from '../dynamic/client-area/client-area.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
+    BrowserAnimationsModule,
     CommonModule,
     ReactiveFormsModule,
     HttpClientModule,

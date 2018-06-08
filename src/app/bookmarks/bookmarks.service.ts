@@ -3,6 +3,7 @@ import {Bookmark, BookmarkId} from '../shared/models/bookmarks.models';
 import {HttpClient} from '@angular/common/http';
 import {BehaviorSubject, Observable} from 'rxjs';
 import {share} from 'rxjs/operators';
+import {environment} from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class BookmarksService<T extends Bookmark> {
   loaded$ = new BehaviorSubject<boolean>(false);
   private items: T[] = [];
   private items$ = new BehaviorSubject<T[]>([]);
-  private readonly apiRoot = 'http://localhost:3000/bookmarks';
+  private readonly apiRoot = environment.bookmarksEndpoint;
 
   constructor(private http: HttpClient) {
 
@@ -23,7 +24,7 @@ export class BookmarksService<T extends Bookmark> {
   }
 
   getAll(): Observable<T[]> {
-    //needs to be share if we want every usage to have the same instance
+    // needs to be share if we want every usage to have the same instance
     return this.items$.pipe(share());
   }
 
